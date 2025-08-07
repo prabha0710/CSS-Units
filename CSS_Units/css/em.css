@@ -1,0 +1,19 @@
+.em-parent {
+    font-size: 20px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .em-child {
+    font-size: 2em; /* 2 × parent = 40px */
+    background: #78ccf3;
+    padding: 10px;
+  }
+  
+  .em-grandchild {
+    font-size: 1.5em; /* 1.5 × 40 = 60px */
+    background: #168ad7;
+    padding: 10px;
+  }
+  

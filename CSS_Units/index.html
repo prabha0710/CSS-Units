@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Units</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>CSS Units</h2>
+      <ul id="unit-list">
+        <li data-unit="px">px</li>
+        <li data-unit="em">em</li>
+        <li data-unit="rem">rem</li>
+        <li data-unit="vw">vw</li>
+        <li data-unit="vh">vh</li>
+        <li data-unit="vmin">vmin</li>
+        <li data-unit="vmax">vmax</li>
+        <li data-unit="percent">percent</li>
+      </ul>
+    </aside>
+    <main class="content">
+
+      <section id="px" class="unit-section">
+        <h2>Pixels (px)</h2>
+        <p class="definition">
+          The <code>px</code> unit is an absolute length. It defines fixed size regardless of screen or parent. Commonly used for buttons, icons, borders, etc.
+        </p>
+      
+        <button class="px-button">Fixed Button (120px × 40px)</button>
+
+      </section>
+      <section id="em" class="unit-section">
+        <h2>em</h2>
+        <p class="definition">Definition: Relative to the font-size of the parent element. Nesting compounds the size.</p>
+        <div class="em-parent">
+          Parent (font-size: 20px)
+          <div class="em-child">
+            Child (font-size: 2em → 40px)
+            <div class="em-grandchild">
+              Grandchild (font-size: 1.5em → 60px)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="rem" class="unit-section">
+        <h2>rem</h2>
+        <p class="definition">Definition: Relative to the font-size of the root HTML element (default: 16px). Doesn't depend on parent.</p>
+        <div class="rem-parent">
+          Parent (font-size: 20px)
+          <div class="rem-child">
+            Child (font-size: 2rem → 32px)
+            <div class="rem-grandchild">
+              Grandchild (font-size: 1.5rem → 24px)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vw" class="unit-section">
+        <h2>vw</h2>
+        <p class="definition">Definition: 1% of the viewport's width.</p>
+        <div class="vw-example example-box">
+          Example box styled using <code>vw</code>
+        </div>
+      </section>
+
+      <section id="vh" class="unit-section">
+        <h2>vh</h2>
+        <p class="definition">Definition: 1% of the viewport's height.</p>
+        <div class="vh-example example-box">
+          Example box styled using <code>vh</code>
+        </div>
+      </section>
+
+      <section id="vmin" class="unit-section">
+        <h2>vmin</h2>
+        <p class="definition">Definition: 1% of the smaller side (viewport width or height).</p>
+        <div class="vmin-example example-box">
+          Example box styled using <code>vmin</code>
+        </div>
+      </section>
+
+      <section id="vmax" class="unit-section">
+        <h2>vmax</h2>
+        <p class="definition">Definition: 1% of the larger side (viewport width or height).</p>
+        <div class="vmax-example example-box">
+          Example box styled using <code>vmax</code>
+        </div>
+      </section>
+      
+      <section id="percent" class="unit-section">
+        <h2>Percent (%)</h2>
+        <p class="definition">Definition: Percentage values are relative to the parent element. For <strong>height</strong>, the parent must have a defined height.</p>
+      
+        <!-- Width example -->
+        <div class="percent-width-parent">
+          <div class="percent-width-child">
+            Width: 50% of parent (300px) = 150px
+          </div>
+        </div>
+      
+        <!-- Height example (working) -->
+        <div class="percent-height-parent">
+          <div class="percent-height-child">
+            Height: 50% of parent (300px) = 150px
+          </div>
+        </div>
+      
+        <!-- Height example (broken) -->
+        <div class="percent-no-height-parent">
+          <div class="percent-no-height-child">
+            Height: 50% — will not work! (no height in parent)
+          </div>
+        </div>
+      
+        <!-- Nested width % -->
+        <div class="percent-nested-outer">
+          Outer (width: 500px)
+          <div class="percent-nested-middle">
+            Middle (width: 50% → 250px)
+            <div class="percent-nested-inner">
+              Inner (width: 50% of 250px → 125px)
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

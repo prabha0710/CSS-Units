@@ -1,0 +1,65 @@
+/* Width % example */
+.percent-width-parent {
+    width: 300px;
+    background: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .percent-width-child {
+    width: 50%;
+    background: #ccf;
+    padding: 10px;
+  }
+  
+  /* Height % example - working */
+  .percent-height-parent {
+    height: 300px;
+    background: #dcedc8;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #9ccc65;
+  }
+  
+  .percent-height-child {
+    height: 50%;
+    background: #aed581;
+    padding: 10px;
+  }
+  
+  /* Height % example - not working */
+  .percent-no-height-parent {
+    background: #fbe9e7;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ff8a65;
+  }
+  
+  .percent-no-height-child {
+    height: 50%;
+    background: #ffccbc;
+    padding: 10px;
+  }
+  
+  /* Nested width % example */
+  .percent-nested-outer {
+    width: 500px;
+    background: #e3f2fd;
+    border: 2px solid #90caf9;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .percent-nested-middle {
+    width: 50%;
+    background: #bbdefb;
+    padding: 10px;
+  }
+  
+  .percent-nested-inner {
+    width: 50%;
+    background: #64b5f6;
+    color: white;
+    padding: 10px;
+  }
+  
